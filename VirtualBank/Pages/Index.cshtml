@@ -1,0 +1,45 @@
+﻿@page
+@model VirtualBank.Pages.IndexModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Login page";
+}
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/VirtualBank.styles.css" asp-append-version="true" />
+</head>
+
+<form method="post" class="p-3 border-5" style="margin: 30px 50px 200px ">
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+    <div class="row pb-2 border border-primary p-2 bg-primary disabled">
+        <h1 class="text-primary text-white"><strong>@ViewData["Title"]</strong></h1>
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <div class="form-group row">
+        <label asp-for="clientim.Cpf">CPF</label>
+        <input asp-for="clientim.Cpf" class="form-control" placeholder="CPF" name="cpf">
+        <span class="text-danger" asp-validation-for="clientim.Cpf"></span>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <br>
+    
+    <div class="form-group row">
+        <label asp-for="clientim.Senha">Password</label>
+        <input asp-for="clientim.Senha" type="password" class="form-control" placeholder="Password" name="Password">
+        <span class="text-danger" asp-validation-for="clientim.Senha"></span>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+    </div>
+
+    <br>
+    <br>
+    
+    <button type="submit" class="btn btn-primary" value="Index">Submit</button>
+</form>
+
+    
+

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualBank", "VirtualBank\VirtualBank.csproj", "{B1C3AFBF-B595-48A5-A493-B5A3C6BC1D67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{B5B52793-A08F-4D81-9807-3A58ED9C47E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{591B9D62-9A81-4FC2-8458-31B7D0003E77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1C3AFBF-B595-48A5-A493-B5A3C6BC1D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C3AFBF-B595-48A5-A493-B5A3C6BC1D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C3AFBF-B595-48A5-A493-B5A3C6BC1D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C3AFBF-B595-48A5-A493-B5A3C6BC1D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B52793-A08F-4D81-9807-3A58ED9C47E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B52793-A08F-4D81-9807-3A58ED9C47E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B52793-A08F-4D81-9807-3A58ED9C47E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B52793-A08F-4D81-9807-3A58ED9C47E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591B9D62-9A81-4FC2-8458-31B7D0003E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591B9D62-9A81-4FC2-8458-31B7D0003E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591B9D62-9A81-4FC2-8458-31B7D0003E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591B9D62-9A81-4FC2-8458-31B7D0003E77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C26A56CC-AEA8-4589-BDFA-033610CAB41D}
+	EndGlobalSection
+EndGlobal
