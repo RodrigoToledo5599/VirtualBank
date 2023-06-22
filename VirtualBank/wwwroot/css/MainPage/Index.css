@@ -1,4 +1,10 @@
-﻿.btn{
+﻿.container-fluid{
+    background-color: rgb(231, 244, 246);
+    border-radius: 9px;
+}
+
+.btn{
     max-width: 20%;
     border-radius:10px;
+    margin: 10px;
 }

@@ -4,24 +4,31 @@
 }
 <head>
 	 <link rel="stylesheet" href="~/css/MainPage/Index.css" asp-append-version="true"/>
-
 </head>
 
 <br>
 
 
 <body class="">
-	<div class="container-fluid">
-		<div class="row">
-			<button class="btn btn-info"> Button </button> &nbsp &nbsp &nbsp &nbsp
-			<button class="btn btn-info"> Button </button> &nbsp &nbsp &nbsp &nbsp
-			<button class="btn btn-info"> Button </button> &nbsp &nbsp &nbsp &nbsp
-			<button class="btn btn-info"> Button </button>
+	<div class="container-fluid border p-5">
+		<div class="row-fluid">
+			<h4>Olá @Model.nome!</h4>
+			
+			@if (Model.Usuario.Saldo == null)
+			{
+				<p>Saldo: <h1>0</h1></p>
+			}
+			else
+			{
+				<p>Saldo: </p><h1>@Model.Usuario.Saldo</h1>
+			}
 		</div>
-		<div class="row">
-			<p>@Model.path</p>
-			<p>@Model.Usuario.Nome</p>
+		<div class="row-fluid">
+			<a></a>
 		</div>
+		
+
+
 	</div>
 
 

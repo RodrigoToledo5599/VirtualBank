@@ -1,7 +1,9 @@
+using System.Text;
 using Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Models;
+using VirtualBank;
 
 namespace VirtualBank.Pages.MainPage
 {
@@ -9,8 +11,8 @@ namespace VirtualBank.Pages.MainPage
     {
         public AppDbContext _db { get; set; }
         public Cliente Usuario { get; set; }
-        public string path = Environment.CurrentDirectory + @"\User.txt";
-        public int? userid {get;set; }
+        public string nome { get; set; }
+        
 
 
         public IndexModel(AppDbContext db)
@@ -18,15 +20,29 @@ namespace VirtualBank.Pages.MainPage
             _db = db;
         }
 
-        public void OnGet()
+        public void OnGet(GetCurrentUser getCurrentUser)
         {
-            StreamReader sr = new StreamReader(path);
-            userid = int.Parse(sr.ReadLine());
-            sr.Close();
-            Usuario = _db.Cliente.Where(c => c.Id == userid).FirstOrDefault();
-            
-
+            Usuario = _db.Cliente.Where(c => c.Id == getCurrentUser.GettingUser()).FirstOrDefault();
+            nome = getingFirstName();
 
         }
+
+
+
+        public string getingFirstName()
+        {
+            List<char> name = new List<char>();
+			char c;
+			for (int i = 0; i <= Usuario.Nome.Length-1; i++)
+			{
+				c = Usuario.Nome.Trim()[i];
+                if (c.Equals(' '))
+					break;
+                else
+                    name.Add(c);
+			}
+            string result = new string(name.ToArray());
+            return result.ToString();
+		}
     }
 }
