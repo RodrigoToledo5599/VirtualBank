@@ -12,10 +12,7 @@ namespace VirtualBank.Pages
         public AppDbContext _db;
         public Cliente? Usuario;
         
-
-
         public string path = Environment.CurrentDirectory + @"\User.txt";
-
 
         public IndexModel(AppDbContext db)
         {

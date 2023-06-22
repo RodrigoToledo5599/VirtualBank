@@ -32,17 +32,18 @@ namespace VirtualBank.Pages.MainPage
         public string getingFirstName()
         {
             List<char> name = new List<char>();
+            Usuario.Nome = Usuario.Nome.Trim();
 			char c;
 			for (int i = 0; i <= Usuario.Nome.Length-1; i++)
 			{
-				c = Usuario.Nome.Trim()[i];
+				c = Usuario.Nome[i];
                 if (c.Equals(' '))
 					break;
                 else
                     name.Add(c);
 			}
             string result = new string(name.ToArray());
-            return result.ToString();
+            return result;
 		}
     }
 }
