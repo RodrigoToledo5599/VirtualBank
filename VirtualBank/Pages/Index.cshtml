@@ -39,10 +39,18 @@
 
     <br>
     <br>
-    <div class="form- btn-group row">
-        <button type="submit" class="btn btn-primary" value="Index">Submit</button>
-        <br>
-        <a asp-page="/CreateAccount">Não possui conta ainda?</a>
+    <div class="form- btn-group">
+        <div class="row">
+            
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary" value="Index">Submit</button>
+            </div>
+
+            <div class="col-6 linkCreateAccount">
+                <a asp-page="/CreateAccount">Não possui conta ainda?</a>
+            </div>
+        
+        </div>
     </div>
 
 </form>
