@@ -12,8 +12,8 @@ namespace Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Cliente> Cliente { get; set; }
-        /*
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.EnableSensitiveDataLogging();
         }*/

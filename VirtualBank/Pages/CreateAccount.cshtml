@@ -1,0 +1,68 @@
+﻿@page
+@model VirtualBank.Pages.CreateAccountModel
+@{
+	Layout = null;
+    ViewData["Title"] = "Criar Conta";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/VirtualBank.styles.css" asp-append-version="true" />
+</head>
+
+<form method="post" class="p-3 border-5" style="margin: 30px 50px 200px ">
+    
+    
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+    <div class="row pb-2 border border-primary p-2 bg-primary disabled">
+        <h1 class="text-primary text-white"><strong>@ViewData["Title"]</strong></h1>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="form-group row">
+        <label asp-for="Usuario.Cpf">CPF</label>
+        <input asp-for="Usuario.Cpf" class="form-control" placeholder="CPF" name="Usuario.Cpf">
+        <span class="text-danger" asp-validation-for="Usuario.Cpf"></span>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <br>
+
+    <div class="form-group row">
+        <label asp-for="Usuario.Nome">Nome</label>
+        <input asp-for="Usuario.Nome" class="form-control" placeholder="Nome" name="Usuario.Nome">
+        <span class="text-danger" asp-validation-for="Usuario.Nome"></span>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <br>
+
+    <div class="form-group row">
+        <label asp-for="Usuario.Email">Email</label>
+        <input asp-for="Usuario.Email" class="form-control" placeholder="Email" name="Usuario.Email">
+        <span class="text-danger" asp-validation-for="Usuario.Email"></span>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <br>
+
+    <div class="form-group row">
+        <label asp-for="Usuario.Senha">Password</label>
+        <input asp-for="Usuario.Senha" type="password" class="form-control" placeholder="Password" name="Usuario.Senha">
+        <span class="text-danger" asp-validation-for="Usuario.Senha"></span>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+    </div>
+
+    <br>
+    <br>
+
+    @Model.ListaDeClientes[2].Email
+
+    <button type="submit" class="btn btn-primary" value="Index">Submit</button>
+</form>

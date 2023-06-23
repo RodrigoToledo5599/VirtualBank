@@ -11,6 +11,7 @@ namespace VirtualBank.Pages
     {
         public AppDbContext _db;
         public Cliente? Usuario;
+
         
         public string path = Environment.CurrentDirectory + @"\User.txt";
 
@@ -21,7 +22,7 @@ namespace VirtualBank.Pages
 
         public void OnGet(){}
 
-        public IActionResult OnPost(string cpf,string Password)
+        public IActionResult OnPost(string cpf, string Password)
         {
 
             Usuario = _db.Cliente.Where(c => c.Cpf == cpf && c.Senha == Password).FirstOrDefault();
@@ -30,7 +31,7 @@ namespace VirtualBank.Pages
                 return Page();
             }
             else
-            { 
+            {
                 StreamWriter sw = new StreamWriter(path);
                 sw.WriteLine(Usuario.Id);
                 sw.Close();
@@ -38,8 +39,6 @@ namespace VirtualBank.Pages
             }
 
         }
-
-        
 
 
     }

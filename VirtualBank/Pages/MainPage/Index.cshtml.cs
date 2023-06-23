@@ -12,8 +12,6 @@ namespace VirtualBank.Pages.MainPage
         public AppDbContext _db { get; set; }
         public Cliente Usuario { get; set; }
         public string nome { get; set; }
-        
-
 
         public IndexModel(AppDbContext db)
         {
@@ -22,6 +20,7 @@ namespace VirtualBank.Pages.MainPage
 
         public void OnGet(GetCurrentUser getCurrentUser)
         {
+            
             Usuario = _db.Cliente.Where(c => c.Id == getCurrentUser.GettingUser()).FirstOrDefault();
             nome = getingFirstName();
 
@@ -45,5 +44,7 @@ namespace VirtualBank.Pages.MainPage
             string result = new string(name.ToArray());
             return result;
 		}
+
+        
     }
 }
