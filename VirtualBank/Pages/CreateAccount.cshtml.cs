@@ -18,24 +18,22 @@ namespace VirtualBank.Pages
         }
 
 
-        public void OnGet()
-        {
-            //ListaDeClientes = _db.Cliente.OrderBy(c => c.Id).ToList();
-        }
+        public void OnGet() {}
 
         public IActionResult OnPost(Cliente Usuario)
         {
-			/*bool valido = ValidandoConta(Usuario);
+			bool valido = ValidandoConta(Usuario);
             if (valido == false)
                 return Page();
-            else*/
-			_db.Cliente.Add(Usuario);
-			_db.SaveChanges();
-			return RedirectToPage("/Index");
+            else
+			    _db.Cliente.Add(Usuario);
+			    _db.SaveChanges();
+			    return RedirectToPage("/Index");
 		}
-        /*
+        
         public bool ValidandoConta(Cliente User)
         {
+            var ListaDeClientes = _db.Cliente.OrderBy(c => c.Id).ToList();
             bool checking = false;
             foreach(Cliente cliente in ListaDeClientes)
             {
@@ -48,9 +46,9 @@ namespace VirtualBank.Pages
                     checking = true;
             }
             return checking;
-            
-
         }
-        */
+
+
+        
     }
 }
