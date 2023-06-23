@@ -22,7 +22,6 @@ namespace Models
         public string Email { get; set; }
         [Required]
         [StringLength(127)]
-        [DataType(DataType.Password)]
         public string Senha { get; set; }
         public int? Saldo { get; private set; }
         
