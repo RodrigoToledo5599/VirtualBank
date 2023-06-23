@@ -25,6 +25,6 @@ namespace Models
         [DataType(DataType.Password)]
         public string Senha { get; set; }
         public int? Saldo { get; private set; }
-
+        
     }
 }

@@ -13,7 +13,7 @@ namespace VirtualBank
             builder.Services.AddRazorPages();
             builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
