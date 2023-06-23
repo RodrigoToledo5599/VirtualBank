@@ -9,9 +9,10 @@ namespace VirtualBank.Pages
     public class CreateAccountModel : PageModel
     {
         public AppDbContext? _db { get; set; }
-        //public List<Cliente> ListaDeClientes { get; set; }
         [BindProperty]
         public Cliente Usuario { get; set; }
+
+
         public CreateAccountModel(AppDbContext db) 
         {
             _db = db;
