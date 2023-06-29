@@ -24,6 +24,6 @@ namespace Models
         [StringLength(127)]
         public string Senha { get; set; }
         public int? Saldo { get; private set; }
-        
+        public ICollection<Pagamentos> Pagamentos { get; private set; }
     }
 }

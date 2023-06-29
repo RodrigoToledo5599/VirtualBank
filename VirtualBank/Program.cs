@@ -1,5 +1,7 @@
 using Data;
 using Microsoft.EntityFrameworkCore;
+using Repository.Interfaces;
+using Repository.Repository;
 
 namespace VirtualBank
 {
@@ -13,7 +15,8 @@ namespace VirtualBank
             builder.Services.AddRazorPages();
             builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-            
+            builder.Services.AddScoped<IClienteRepository,ClienteRepository>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

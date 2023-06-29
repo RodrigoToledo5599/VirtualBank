@@ -12,6 +12,10 @@ namespace Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Pagamentos> Pagamentos { get; set; }
+
+
+
         
         /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

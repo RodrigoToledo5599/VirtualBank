@@ -2,20 +2,20 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Models;
-
+using Repository.Interfaces;
 
 namespace VirtualBank.Pages
 {
     [BindProperties]
     public class IndexModel : PageModel
     {
-        public AppDbContext _db;
+        public IClienteRepository _db;
         public Cliente? Usuario;
 
         
         public string path = Environment.CurrentDirectory + @"\User.txt";
 
-        public IndexModel(AppDbContext db)
+        public IndexModel(IClienteRepository db)
         {
             _db = db;
         }
@@ -25,7 +25,7 @@ namespace VirtualBank.Pages
         public IActionResult OnPost(string cpf, string Password)
         {
 
-            Usuario = _db.Cliente.Where(c => c.Cpf == cpf && c.Senha == Password).FirstOrDefault();
+            var Usuario = _db.LogCliente(cpf, Password);
             if (Usuario == null)
             {
                 return Page();

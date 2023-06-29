@@ -8,6 +8,8 @@ namespace Models
 {
     public class Pagamentos
     {
-        
+        public int Id { get; set; }
+        public int value { get; set; }
+        public bool pendente { get; set; }
     }
 }
